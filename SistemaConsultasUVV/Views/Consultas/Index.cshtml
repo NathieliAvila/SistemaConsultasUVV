@@ -1,0 +1,39 @@
+﻿@model List<SistemaConsultasUVV.Models.Consulta>
+
+@{
+    ViewData["Title"] = "Minhas Consultas";
+}
+
+<h2>Minhas Consultas</h2>
+
+<a asp-action="Criar" class="btn btn-primary mb-3">Nova Consulta</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Especialidade</th>
+            <th>Data/Hora</th>
+            <th>Descrição</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var consulta in Model)
+        {
+            <tr>
+                <td>@consulta.Especialidade</td>
+                <td>@consulta.DataHora.ToString("dd/MM/yyyy HH:mm")</td>
+                <td>@consulta.Descricao</td>
+                <td>
+                    <a asp-action="Editar" asp-route-id="@consulta.Id" class="btn btn-sm btn-secondary">Editar</a>
+                    <a asp-action="Excluir" asp-route-id="@consulta.Id" class="btn btn-sm btn-danger">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@if (!Model.Any())
+{
+    <p>Você ainda não tem consultas cadastradas.</p>
+}

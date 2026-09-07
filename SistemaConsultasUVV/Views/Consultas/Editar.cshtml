@@ -1,0 +1,38 @@
+﻿@model SistemaConsultasUVV.Models.ViewModels.ConsultaViewModel
+
+@{
+    ViewData["Title"] = "Editar Consulta";
+}
+
+<h2>Editar Consulta</h2>
+
+<form asp-action="Editar" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="mb-3">
+        <label asp-for="Especialidade"></label>
+        <input asp-for="Especialidade" class="form-control" />
+        <span asp-validation-for="Especialidade" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="DataHora"></label>
+        <input asp-for="DataHora" class="form-control" />
+        <span asp-validation-for="DataHora" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Descricao"></label>
+        <textarea asp-for="Descricao" class="form-control"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Salvar</button>
+    <a asp-action="Index" class="btn btn-link">Cancelar</a>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
