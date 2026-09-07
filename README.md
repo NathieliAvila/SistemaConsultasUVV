@@ -1,7 +1,9 @@
 SISTEMA DE GESTÃO DE CONSULTAS UVV
+
 Aplicação Web desenvolvida em ASP.NET Core MVC para a disciplina de Desenvolvimento Web Back-end, permitindo o cadastro de usuários e o gerenciamento de consultas médicas/profissionais, com persistência via Entity Framework Core e autenticação por cookie.
 
 DESCRIÇÃO
+
 O sistema permite que um usuário crie uma conta, faça login e gerencie suas próprias consultas (criar, listar, editar e excluir). Cada usuário só tem acesso às consultas que ele mesmo cadastrou, com isolamento total entre os dados de diferentes usuários.
 
 TECNOLOGIAS UTILIZADAS
