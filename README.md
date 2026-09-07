@@ -21,6 +21,7 @@ COMO EXECUTAR
    Update-Database
 ```
    Isso cria o banco `SistemaConsultasUVV` com as tabelas necessárias.
+
 4. Pressione F5 para rodar o projeto.
 5. Acesse `/Usuarios/Cadastro` para criar uma conta.
 
@@ -30,6 +31,7 @@ FUNCIONALIDADES
 - Cada usuário só acessa as próprias consultas (rotas protegidas com `[Authorize]`)
 
 VÍDEO DE DEMONSTRAÇÃO
+
 https://www.loom.com/share/e046e690aa994b91ae145ef8ed6f7f2b
 
 Nathieli Avila dos Santos
